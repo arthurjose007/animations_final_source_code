@@ -38,13 +38,19 @@ class _ShoppingCartButtonState extends State<ShoppingCartButton> {
                   isExpanded ? Icons.check : Icons.shopping_cart,
                   color: Colors.white,
                 ),
-                if (isExpanded)
-                  const Text(
-                    'Added to Cart!',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                if (isExpanded
+                                       // Allows text to shrink if needed
+
+                  Flexible(
+                    child: Text(
+                      "Add to Cart!",
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      overflow:
+                          TextOverflow.ellipsis, // Handle overflow gracefully
                     ),
                   ),
               ],
