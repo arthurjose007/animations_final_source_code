@@ -39,7 +39,9 @@ class _ShoppingCartButtonState extends State<ShoppingCartButton> {
                   color: Colors.white,
                 ),
                 if (isExpanded)
-                  const Text(
+                //for avoid the RenderFlex overflowed
+                  Flexible(
+                Text(
                     'Added to Cart!',
                     style: TextStyle(
                       fontSize: 16,
@@ -47,6 +49,7 @@ class _ShoppingCartButtonState extends State<ShoppingCartButton> {
                       color: Colors.white,
                     ),
                   ),
+                    )
               ],
             ),
           ),
